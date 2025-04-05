@@ -1,0 +1,18 @@
+.footer{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  background-color: #E3C9A8;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  //shadow
+  box-shadow: 0 -5px 20px rgba(160, 81, 16, 0.5);
+p{
+  color: rgb(199, 138, 59);
+}
+}
+.footer img{
+  height: 70px;
+  width: 70px;
+}

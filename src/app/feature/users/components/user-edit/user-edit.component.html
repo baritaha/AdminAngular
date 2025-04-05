@@ -1,0 +1,35 @@
+<div class="container block">
+  <div class="usertitle">
+    <h4>Edit user</h4>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" [(ngModel)]="name" placeholder="name...">
+    <div class="error mt-2" *ngIf="!name">
+      <small class="text-danger p-2 m-2">
+        {{error}}
+      </small>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-control" [(ngModel)]="email" placeholder="Email...">
+    <div class="error mt-2" *ngIf="!email">
+      <small class="text-danger p-2 m-2">
+        {{error}}
+      </small>
+    </div>
+  </div>
+  <div class="input-group">
+    <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password...">
+  </div>
+  <div class="error mt-2" *ngIf="!password">
+    <small class="text-danger p-2 m-2">
+      {{error}}
+    </small>
+  </div>
+  <div class="input-group-btn m-5">
+    <button class="btn btn-primary" type="button" (click)="saveChangeClick()">save change</button>
+  </div>
+  <div class="success">
+    <p *ngIf="success" class="bg-success text-white">{{loading}}</p>
+  </div>
+</div>

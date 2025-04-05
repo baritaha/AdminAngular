@@ -1,0 +1,42 @@
+<div class="state d-flex justify-content-center align-items-center">
+  <p class="bg-green text-success p-2" *ngIf="loading"><img src="/assets/loading3.gif" alt=""><strong
+    class="fw-bold ml-3">Getting Data ...</strong>
+  </p>
+  <p class="bg-danger text-white p-2" *ngIf="error"><strong class="fw-bold ml-3">{{error}}</strong>
+  </p>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center mt-5" *ngIf="user && !loading">
+
+  <div class="card p-4 form" style="width: 500px;">
+    <div class="usertitle text-white d-flex justify-content-center align-items-center">
+      <h4>User Details</h4>
+    </div>
+
+    <!-- Display Name -->
+    <div class="form-group">
+      <label class="fw-bold text-secondary">Name:</label>
+      <p class="text-dark border p-2 rounded">{{ user.name }}</p>
+    </div>
+
+    <!-- Display Email -->
+    <div class="form-group">
+      <label class="fw-bold text-secondary">Email:</label>
+      <p class="text-dark border p-2 rounded">{{ user.email }}</p>
+    </div>
+
+    <!-- Display Password -->
+    <div class="form-group">
+      <label class="fw-bold text-secondary">Password:</label>
+      <p class="text-dark border p-2 rounded">{{ user.password| passwordMask:'*':3 }}</p>
+      <!-- Optionally, use a pipe to mask the password -->
+    </div>
+
+    <!-- Actions -->
+    <div class="d-flex justify-content-between mt-4">
+      <button class="btn detailsBtn" routerLink="/users/edit/{{user.id}}">Edit</button>
+      <button class="btn btn-danger">Delete</button>
+    </div>
+
+  </div>
+</div>

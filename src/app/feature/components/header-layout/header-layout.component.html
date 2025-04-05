@@ -1,0 +1,21 @@
+<div class="nav header">
+<img src="./assets/cup.png" alt="" style="height: 70px; width:70px">
+<div class="nav-items">
+  <ul>
+    <li>
+      <a [routerLink]="['/login']" routerLinkActive="router-link-active" > Home</a>
+      <a [routerLink]="['/users/list']" routerLinkActive="router-link-active"> Users</a>
+      <a [routerLink]="['/routePath']" routerLinkActive="router-link-active"> About</a>
+      <a [routerLink]="['/routePath']" routerLinkActive="router-link-active"> Orders</a>
+      <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active"> Dashboard</a>
+    </li>
+  </ul>
+</div>
+<div class="name" *ngIf="welcomeName">
+<h5 class="text-white fw-bold"> Welcome {{welcomeName}}</h5>
+</div>
+<div class="btn">
+  <!-- <button [routerLink]="['/login']" >login</button> -->
+  <button [routerLink]="['/login']" (click)="logout()">Logout</button>
+</div>
+</div>

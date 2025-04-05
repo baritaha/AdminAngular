@@ -1,0 +1,49 @@
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="card p-4 form">
+    <div class="usertitle text-white d-flex justify-content-center align-items-center">
+      <h4>{{ id ?'Edit ': 'Add'}} user</h4>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control m-2" [(ngModel)]="name" placeholder="name ...">
+      <div *ngFor="let err of error">
+        <div *ngIf="err.toLowerCase().includes('name')">
+          <p class="text-danger">{{ err }}</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control m-2" [(ngModel)]="email" placeholder="email ...">
+      <div *ngFor="let err of error">
+        <div *ngIf="err.toLowerCase().includes('email')">
+          <p class="text-danger">{{ err }}</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="input-group">
+      <input type="password" class="form-control m-2" [(ngModel)]="password" placeholder="password...">
+    </div>
+    <div *ngFor="let err of error">
+      <div *ngIf="err.toLowerCase().includes('password')">
+        <p class="text-danger">{{ err }}</p>
+      </div>
+    </div>
+
+    <div class="input-group-btn mt-3">
+      <p class="bg-green text-success p-2" *ngIf="success && !id"><img src="/assets/loading3.gif" alt=""><strong
+          class="fw-bold ml-3">{{loading}}</strong>
+      </p>
+      <p class="bg-green text-success p-2" *ngIf="success && id"><img src="/assets/loading3.gif" alt=""><strong
+          class="fw-bold ml-3">{{loading}} ... </strong>
+      </p>
+      <p class="bg-success text-white p-2" *ngIf="changed"><img src="/assets/loading3.gif" alt=""><strong
+        class="fw-bold ml-3">{{changed}}</strong>
+    </p>
+    <p class="bg-danger text-white p-2" *ngIf="error.length>0"><strong
+      class="fw-bold ml-3">{{error}}</strong>
+  </p>
+      <button class="addBtn" type="button" (click)="saveBtnClick()">{{id?'Save change':'Add user'}}</button>
+    </div>
+  </div>
+</div>

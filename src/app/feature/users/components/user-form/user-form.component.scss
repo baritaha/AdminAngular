@@ -1,0 +1,25 @@
+.form {
+  width: 500px !important;
+  background-color: #e4e1ac;
+  border: none;
+
+  // Add shadow
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Subtle shadow effect
+  border-radius: 10px; // Optional: Rounded corners for a smoother look
+  padding: 20px; // Optional: Add padding for better spacing inside the form
+  .addBtn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(190,126,62);
+  transition: 0.3s ease-in;
+  color: white;
+  &:hover{
+    background-color: rgb(175, 106, 36);
+    transition: 0.3s ease-in;
+  }
+  }
+  h4{
+    color:rgb(177, 129, 70)
+  }
+}

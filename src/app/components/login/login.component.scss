@@ -1,0 +1,21 @@
+body{
+ // background-color: #fffdd0;
+ background-image: url(/assets/bglogin.png);
+ background-size: cover;
+  .card{
+    background-color: rgb(255,250,130,0.3);
+    border: none;
+    h4{
+      color: rgb(233, 207, 181);
+    }
+    .btn-block{
+      background-color: rgb(202, 146, 89);
+      padding: 10px 20px;
+      color: rgb(233, 207, 181);
+    }
+    .btn-block:hover{
+      background-color: rgb(189, 113, 36);
+
+    }
+  }
+}

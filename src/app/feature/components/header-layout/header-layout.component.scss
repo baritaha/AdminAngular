@@ -1,0 +1,52 @@
+.header {
+  background-color: #016064;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav-items {
+   // margin-right: 100px;
+    margin-top: 10px;
+    display: flex;
+
+    ul {
+      li {
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          padding: 10px;
+          color: rgb(245, 212, 172);
+          font-weight: 600;
+          margin-left: 5px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #f3cd7a; // Lighter teal for hover
+            border-radius: 5px;
+            color: rgb(136, 84, 21);
+            transition: 0.3s ease-in;
+          }
+
+          &.router-link-active {
+            background-color: #f3cd7a; // Light green-teal for active link
+            border-radius: 5px;
+            color: rgb(136, 84, 21)
+          }
+        }
+      }
+    }
+  }
+  .btn button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(190,126,62);
+    transition: 0.3s ease-in;
+    color: white;
+    &:hover{
+      background-color: rgb(175, 106, 36);
+      transition: 0.3s ease-in;
+    }
+    }
+}
